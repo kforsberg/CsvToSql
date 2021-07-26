@@ -1,0 +1,9 @@
+export enum EDataTypes {
+    NONE = "NONE",
+    NVARCHAR = "NVARCHAR",
+    VARCHAR = "VARCHAR",
+    INT = "INT",
+    UNIQUEIDENTIFIER = "UNIQUEIDENTIFIER",
+    DATETIME = "DATETIME",
+    BIT = "BIT"
+}
