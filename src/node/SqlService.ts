@@ -54,6 +54,9 @@ export class SqlService {
 
     private buildColumnValue(val: object, dataType: EDataTypes) {
         let valStr = `${val}`.replace('\'', '\'\'');
+        if (this.isNullOrEmpty(valStr)) {
+            return 'NULL'
+        }
         switch (dataType) {
             case EDataTypes.INT:
             case EDataTypes.BIT:
@@ -63,6 +66,10 @@ export class SqlService {
             default:
                 return `'${valStr}'`;
         }
+    }
+
+    private isNullOrEmpty(val: string) {
+        return val === '' || val === null;
     }
 
 }
