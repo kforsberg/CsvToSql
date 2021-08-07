@@ -7,8 +7,8 @@ const createWindow = (): void => {
     .then((name) => console.log(`Added Extension:  ${name}`))
     .catch((err) => console.log('An error occurred: ', err));
     let win = new BrowserWindow({
-        width: 900,
-        height: 700,
+        width: 1200,
+        height: 800,
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false,
